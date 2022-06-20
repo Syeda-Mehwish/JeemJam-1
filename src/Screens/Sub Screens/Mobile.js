@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, TextInput, Image, Touchable, Toucha
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-import { MobileData } from '../Data/Mobile-Data';
+import { Mobiles } from '../Data/Mobile-Data';
 
 
 
@@ -35,7 +35,7 @@ export default function Mobile({ navigation }) {
                 </View>
 
                 <View style={styles.subview}>
-                    {MobileData.map((item, index) => {
+                    {Mobiles.map((item, index) => {
                         return (
                             <TouchableOpacity key={index}>
                                 <View style={styles.listelem}>
@@ -90,8 +90,9 @@ const styles = StyleSheet.create({
     img: {
         height: 40,
         width: 60,
-        marginLeft: '1%',
-        resizeMode: 'stre'
+        marginLeft: '2%',
+        resizeMode: 'stretch',
+        alignItems: 'center',
     },
     topimg: {
         height: 30,

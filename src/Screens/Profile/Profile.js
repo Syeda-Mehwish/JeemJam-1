@@ -35,7 +35,7 @@ export default function Profile({ navigation }) {
                 <View style={styles.subview}>
                     <Text style={styles.subheading}>
                         <MaterialIcons name='account-circle' size={20} color={'blue'} style={styles.topicon} solid />  My Account</Text>
-                   <TouchableOpacity onPress={()=> navigation.navigate('Signin')}>
+                   <TouchableOpacity onPress={() =>  navigation.navigate('Signin')}>
                    <Text style={styles.txt} >Connect with JeemJam </Text>
                     </TouchableOpacity> 
                 </View>

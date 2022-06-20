@@ -4,6 +4,11 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { Picker } from '@react-native-picker/picker';
 import ImagePicker from 'react-native-image-crop-picker';
+import { CarData } from "../../Data/Car-Data";
+import { JobData } from '../../Data/Jobs-Data';
+import { MiscellaneousData } from '../../Data/Miscellaneous-Data'
+import { Mobiles } from '../../Data/Mobile-Data';
+import { ServicesData } from '../../Data/Services-Data';
 
 
 export default function Ad({ navigation }) {
@@ -12,6 +17,12 @@ export default function Ad({ navigation }) {
     const [author, setauthor] = React.useState('');
     const [country, setcountry] = React.useState('');
     const [category, setcategory] = React.useState('');
+    const [subcategory, setsubcategory] = React.useState('');
+    const [Mobilesubcategory, setMobilesubcategory] = React.useState('');
+    const [Carsubcategory, setCarsubcategory] = React.useState('');
+    const [Jobsubcategory, setJobsubcategory] = React.useState('');
+    const [Servicesubcategory, setServicesubcategory] = React.useState('');
+    const [Miscellaneousubcategory, setMiscellaneousubcategory] = React.useState('');
     const [phone, setphone] = React.useState('');
     const [whatsapp, setwhatsapp] = React.useState('');
     const [content, setcontent] = React.useState('');
@@ -113,13 +124,170 @@ export default function Ad({ navigation }) {
                         onValueChange={(item) =>
                             setcategory(item)
                         }>
-                        <Picker.Item label="Select Category" value=" " style={styles.dropdowntxt} />
+                        <Picker.Item label="Choose Category" value=" " style={styles.dropdowntxt} />
                         <Picker.Item label="Mobiles" value="Mobiles" style={styles.dropdowntxt} />
                         <Picker.Item label="Cars" value="Cars" />
                         <Picker.Item label="Miscelleneous" value="Miscelleneous" />
                         <Picker.Item label="Jobs" value="Jobs" />
                         <Picker.Item label="Services" value="Services" />
                     </Picker>
+                  
+                    {category ==" "?  
+                    <Picker
+                        selectedValue={Mobilesubcategory}
+                        dropdownIconColor='black'
+                        style={styles.dropdown}
+                        onValueChange={(itemValue,index) =>
+                            setMobilesubcategory(itemValue)
+                        }>
+                            
+                         
+                        
+                        <Picker.Item label="Choose A Sub Category" value=" " style={styles.dropdowntxt} />
+                        
+                        
+                    </Picker>:
+                  null}
+                    
+                    {category =="Mobiles"?  
+                    <Picker
+                        selectedValue={Mobilesubcategory}
+                        dropdownIconColor='black'
+                        style={styles.dropdown}
+                        onValueChange={(itemValue,index) =>
+                            setMobilesubcategory(itemValue)
+                        }>
+                            
+                         
+                        
+                        <Picker.Item label="Choose A Sub Category" value=" " style={styles.dropdowntxt} />
+                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
+                        
+                        
+                    </Picker>:
+                   null}
+
+                    {category =="Cars"?  
+                    <Picker
+                        selectedValue={Carsubcategory}
+                        dropdownIconColor='black'
+                        style={styles.dropdown}
+                        onValueChange={(itemValue,index) =>
+                            setCarsubcategory(itemValue)
+                        }>
+                           
+                            <Picker.Item label="Choose A Sub Category" value=" " style={styles.dropdowntxt} />
+                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
+                        
+                        
+                    </Picker>:
+                     null}
+
+                    {category =="Miscelleneous"?  
+                    <Picker
+                        selectedValue={Miscellaneousubcategory}
+                        dropdownIconColor='black'
+                        style={styles.dropdown}
+                        onValueChange={(itemValue,index) =>
+                            setMiscellaneousubcategory(itemValue)
+                        }>
+                         
+                        <Picker.Item label={"abc"} value={"abc"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"abcv"} value={"abcv"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"abcd"} value={"abcd"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"abcz"} value={"abcz"} style={styles.dropdowntxt} />
+                        
+                        
+                    </Picker>:
+                    null}
+
+                    {category =="Jobs"?  
+                    <Picker
+                        selectedValue={Jobsubcategory}
+                        dropdownIconColor='black'
+                        style={styles.dropdown}
+                        onValueChange={(itemValue,index) =>
+                            setJobsubcategory(itemValue)
+                        }>
+                            
+                         
+                            
+                        
+                        <Picker.Item label={"abc"} value={"abc"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"abcv"} value={"abcv"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"abcd"} value={"abcd"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"abcz"} value={"abcz"} style={styles.dropdowntxt} />
+                        
+                        
+                    </Picker>:
+                    null}
+
+                
+
+                    {category =="Services"?  
+                    <Picker
+                        selectedValue={Servicesubcategory}
+                        dropdownIconColor='black'
+                        style={styles.dropdown}
+                        onValueChange={(itemValue,index) =>
+                            setServicesubcategory(itemValue)
+                        }>
+                            
+                         
+                            
+                        
+                        <Picker.Item label={"abc"} value={"abc"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"abcv"} value={"abcv"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"abcd"} value={"abcd"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"abcz"} value={"abcz"} style={styles.dropdowntxt} />
+                        
+                        
+                    </Picker>:
+                    null}
+                   
 
                     <View style={styles.imgview}>
                         <Text style={styles.imgtxt}>Choose Main Image for ad</Text>

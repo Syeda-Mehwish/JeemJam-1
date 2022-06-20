@@ -2,12 +2,21 @@ import * as React from 'react';
 import { View, Text, StyleSheet, ScrollView, TextInput, Image, TouchableOpacity } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import auth from '@react-native-firebase/auth';
+import { firebase } from '@react-native-firebase/auth';
 
 
 
-export default function Home({ navigation }) {
+
+export default function Home({ navigation,route }) {
+     const [SelectedCountry , setSelectedCountry] =React.useState(null)
+    React.useEffect(()=>{
+        let {SelectedCountry} = route.params 
+        setSelectedCountry(SelectedCountry)
+    },[])
 
     const [text, onChangetext] = React.useState(null);
+    const CountryImg=SelectedCountry;
 
     const options = [
         { id: 1, name: 'Mobiles', img: require('../../assets/Images/mob.jpg',), nextlocation: 'Mobile' },
@@ -15,6 +24,8 @@ export default function Home({ navigation }) {
         { id: 3, name: 'Jobs', img: require('../../assets/Images/job.png'), nextlocation: 'Jobs' },
         { id: 4, name: 'Services', img: require('../../assets/Images/service.png'), nextlocation: 'Services' },
         { id: 5, name: 'Miscellaneous', img: require('../../assets/Images/notebook.jpg'), nextlocation: 'Miscellaneous' },]
+
+        
 
 
     return (
@@ -24,7 +35,7 @@ export default function Home({ navigation }) {
                 <View style={styles.miniview}>
                     <FontAwesome name='user-circle-o' size={25} color={'white'} style={styles.topicon} solid onPress={() => navigation.navigate('Profile')} />
                     <TouchableOpacity onPress={() => navigation.navigate('Countries')}>
-                        <Image source={require('../../assets/Images/Flags/pakistan.png')} style={styles.topimg} />
+                        <Image   source={CountryImg?.img} style={styles.topimg} />
                     </TouchableOpacity></View>
             </View>
             <ScrollView style={styles.list}>
@@ -44,7 +55,19 @@ export default function Home({ navigation }) {
                 </View>
                 <View style={styles.middleheader}>
                     <View style={styles.pay}>
-                        <TouchableOpacity onPress={() => navigation.navigate('Signin')}>
+                        <TouchableOpacity 
+                        onPress={() =>  
+                           { 
+                            firebase.auth().onAuthStateChanged(function(user) {
+                                if (user) {
+                                    navigation.navigate('Ad')
+                                  // User is signed in.
+                                } else {
+                                    navigation.navigate('Ad')
+                                  // No user is signed in.
+                                }
+                              });}
+                        }>
                             <Image source={require('../../assets/Images/ad.png')} style={styles.img} />
                         </TouchableOpacity>
                         <Text style={styles.middletxt}>

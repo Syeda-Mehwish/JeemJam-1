@@ -7,7 +7,7 @@ export default function WelcomeScreen({ navigation }) {
 
 
     React.useEffect(() => {
-        setTimeout(() => navigation.navigate('Home'), 1000);
+        setTimeout(() => navigation.navigate('Countries'), 1000);
     }, [])
 
     return (

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { View, Text, StyleSheet, ScrollView, TextInput, Image, Touchable, TouchableOpacity } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import auth from '@react-native-firebase/auth';
 
 
 
@@ -8,11 +9,32 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 export default function Signin({ navigation }) {
     const [email, setemail] = React.useState()
     const [password, setpassword] = React.useState()
+    function Signin(email,password){
+       
+             auth().signInWithEmailAndPassword(email, password) .then(() => {
+      
+     
+                navigation.navigate('PostAd')
+              }) 
+              .catch(error => {
+                if (error.code === 'auth/invalid-email') {
+                console.log('That email address is invalid!');
+              }
+          
+              console.error(error);
+            });
+          
+          
+        }
 
-    const Signin=()=>{
-        alert('Signed in successfully!')
-        navigation.navigate('PostAd')
-    }
+    
+
+    
+
+    //  const Signin=()=>{
+    //      alert('Signed in successfully!')
+    //      navigation.navigate('PostAd')
+    //  }
 
     return (
         <View style={styles.container}>
@@ -24,7 +46,7 @@ export default function Signin({ navigation }) {
                     style={styles.input}
                     onChangeText={setemail}
                     value={email}
-                    placeholder="ENTER YOUR PHONE NO."
+                    placeholder="ENTER YOUR EMAIL."
                 />
                 <TextInput
                     style={styles.input}
@@ -32,7 +54,7 @@ export default function Signin({ navigation }) {
                     value={password}
                     placeholder="ENTER PASSWORD"
                 />
-                <TouchableOpacity style={styles.login} onPress={Signin}>
+                <TouchableOpacity style={styles.login} onPress={() =>  Signin(email,password)}>
                     <Text style={styles.logintxt}>Login</Text>
                 </TouchableOpacity>
             </View>

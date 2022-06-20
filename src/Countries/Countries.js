@@ -9,6 +9,7 @@ export default function Countries({ navigation }) {
     const [country, setcountry] = useState();
     const selectHandler = (value) => {
         setcountry(value);
+
         console.log(country )
     }
    
@@ -25,7 +26,7 @@ export default function Countries({ navigation }) {
                             style={
                                 item.name === country ? styles.selected : styles.unselected
                             } key={index}
-                            onPress={() => selectHandler(item.name)}>
+                            onPress={()=>navigation.navigate("Home",{SelectedCountry:item})}>
                             <View style={styles.optionview}>
                                 <Image source={item.img} style={styles.img} />
                                 <Text style={

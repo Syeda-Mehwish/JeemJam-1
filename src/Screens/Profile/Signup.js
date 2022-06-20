@@ -1,6 +1,7 @@
-import * as React from 'react';
+import React, { useContext,useState } from 'react'
 import { View, Text, StyleSheet, ScrollView, TextInput, Image, Touchable, TouchableOpacity } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import auth from '@react-native-firebase/auth';
 
 
 
@@ -9,6 +10,25 @@ export default function Signup({ navigation }) {
     const [email, setemail] = React.useState()
     const [password, setpassword] = React.useState()
 
+    function createAccount(email,Password){
+        auth().createUserWithEmailAndPassword(email, Password)
+  .then(() => {
+      
+     
+    navigation.navigate('PostAd')
+  })
+  .catch(error => {
+    if (error.code === 'auth/email-already-in-use') {
+      console.log('That email address is already in use!');
+    }
+
+    if (error.code === 'auth/invalid-email') {
+      console.log('That email address is invalid!');
+    }
+
+    console.error(error);
+  });
+}
         
     return (
         <View style={styles.container}>
@@ -28,7 +48,8 @@ export default function Signup({ navigation }) {
                     value={password}
                     placeholder="ENTER PASSWORD"
                 />
-                <TouchableOpacity style={styles.login}>
+                <TouchableOpacity style={styles.login}
+                 onPress={()=>createAccount(email,password)}>
                     <Text style={styles.logintxt}>Sign Up</Text>
                 </TouchableOpacity>
             </View>

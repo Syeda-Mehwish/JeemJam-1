@@ -1,4 +1,4 @@
-export const MobileData = [
+export const Mobiles = [
     { id: 1, name: 'Samsung', img: require('../../../assets/Images/Mobiles/samsung.png') },
     { id: 2, name: 'iPhone', img: require('../../../assets/Images/Mobiles/ppk.png') },
     { id: 3, name: 'Oppo', img: require('../../../assets/Images/Mobiles/oppo.png') },
