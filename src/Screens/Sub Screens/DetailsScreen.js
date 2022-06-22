@@ -1,58 +1,82 @@
 import * as React from 'react';
 import { View, Text, StyleSheet, ScrollView, TextInput, Image, Touchable, TouchableOpacity } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-import { CarData } from '../Data/Car-Data';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import { options } from '../Sub Screens/allAdsScreen';
 
 
 
-export default function DetailsScreen({ navigation }) {
 
-    const options = [
-        { id: 1, name: 'Samsung S10', img: require('../../../assets/Images/mob.jpg',), nextlocation: 'Mobile' },
-        { id: 2, name: 'Cars', img: require('../../../assets/Images/tyty.jpg'), nextlocation: 'Cars' },
-        { id: 3, name: 'Jobs', img: require('../../../assets/Images/job.png'), nextlocation: 'Jobs' },
-        { id: 4, name: 'Services', img: require('../../../assets/Images/service.png'), nextlocation: 'Services' },
-        { id: 5, name: 'Miscellaneous', img: require('../../../assets/Images/notebook.jpg'), nextlocation: 'Miscellaneous' },]
+export default function DetailsScreen({ navigation, route }) {
+    // const images = options.filter(item=>item.Title==selectedItem.Title)
+    // console.log(images);
 
-        
+    const [selectedItem,setSelectedItem] = React.useState(null)
+    const [profileimage, setprofileimage] = React.useState('https://icon-library.com/images/user-image-icon/user-image-icon-18.jpg');
+    React.useEffect(()=>{
+        let {selectedItem} = route.params
+        setSelectedItem(selectedItem)
+    },[])
 
     return (
         <View style={styles.container}>
             <View style={styles.headview}>
                 <Text style={styles.heading}><FontAwesome5 onPress={() => navigation.goBack()} name='arrow-left' size={18} color={'white'} style={styles.topicon} solid />  Details</Text>
                 <View style={styles.miniview}>
-                    <FontAwesome name='user-circle-o' size={25} color={'white'} style={styles.topicon} solid />
+                <FontAwesome name='user-circle-o' size={25} color={'white'} style={styles.topicon} solid onPress={() => navigation.navigate('Profile')} />
                 </View>
             </View>
-            <ScrollView style={styles.list}>
+            <ScrollView style={styles.listelem} >
 
 
-                <View style={styles.subview}>
-                    {options.map((item, index) => {
-                        return (
-                            <View key={index} style={{padding: 15}}>
-                                <View style={styles.listelem}>
-                                    <Image style={styles.img} source={item.img} />
-                                    <View style={styles.picview}>
-                                    <Image style={styles.imgx} source={item.img} />
-                                    <Image style={styles.imgx} source={item.img} />
-                                    <Image style={styles.imgx} source={item.img} />
-                                    <Image style={styles.imgx} source={item.img} />
+               
+                   
+                       
+                            
+                              <TouchableOpacity
+                              onPress={() => navigation.navigate('ShowingInages',{selectedImage: selectedItem
+                              })}>
+                                 
+                                    <Image style={styles.img} source={selectedItem?.Mainimg} 
+                                    />
+                                     <FontAwesome name='angle-double-right' size={60} color={'black'} style={{alignSelf:"flex-end", marginTop:50, marginEnd:20, position:'absolute'}} solid onPress={() => navigation.navigate('ShowingInages',{selectedImage: selectedItem
+                              })} />
+                                  </TouchableOpacity>
+                                    <View style={{backgroundColor:'white'}}>
+                                    <Text style={styles.destxt}>{selectedItem?.des}</Text>
                                     </View>
-                                  
-                                    <Text style={styles.listtxt}>{item.name}</Text>
+                                    <View style={styles.ContantContainer}>
+                                        <View style={styles.userContainer}>
+                                        
+                <Image source={{ uri: profileimage }} style={styles.Profileimg} />
+               
+                                        
+                                        <Text style={[styles. ContactText,{marginRight:130}]}>{selectedItem?.Author}</Text>
+
+                                        </View>
+                                        <View style={styles.WhatsAppContainer}>
+                                        <FontAwesome name='whatsapp' size={25} color={'white'} style={styles.topicon} solid />
+                                            <Text style={[styles. ContactText,{marginRight:100}]}>{selectedItem?.WhatsAppeno}</Text>
+                                        </View>
+                                        <View style={styles.NumberContainer}>
+                                        <MaterialIcons name='add-call' size={25} color={'white'} style={styles.topicon} solid />
+                                            <Text style={[styles. ContactText,{marginRight:100}]}>{selectedItem?.phoneno}</Text>
+                                        </View>
+                                      
+
+                                   
+                                      
+                                   
                                    
 
                                     
 
-                                </View>
-                          </View>
-                        );
-                    })}
+                               
+                        
+                    
                 </View>
-                <View></View>
+                
             </ScrollView>
         </View>
     );
@@ -62,6 +86,60 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#eee',
         flex: 1
+    },
+    ContantContainer: {
+        backgroundColor: '#D3D3D3',
+        height: "90%",
+        width: '100%',
+        alignItems: 'center',
+        justifyContent:'center',
+        flex: 1,
+        marginVertical:20,
+        
+       
+    },
+    userContainer: {
+        backgroundColor: '#1E90FF',
+        height: 50,
+        width: '90%',
+        marginVertical:20,
+        justifyContent:"space-around",
+        alignItems:'center',
+        borderRadius:4,
+        flexDirection:'row'
+       
+    },
+    NumberContainer: {
+        backgroundColor: '#4169E1',
+        height: 50,
+        width: '90%',
+        marginVertical:20,
+        justifyContent:"space-around",
+        alignItems:'center',
+        borderRadius:4,
+        flexDirection:'row'
+       
+    },
+    ContactText:{
+        fontSize: 20,
+       margin:"1%",
+        color: 'white',
+        fontWeight:'600'
+        
+        
+        
+
+    },
+    WhatsAppContainer: {
+        backgroundColor: '#8A9A5B',
+        height: 50,
+        width: '90%',
+        marginVertical:20,
+        justifyContent:"space-around",
+        alignItems:'center',
+        borderRadius:4,
+        flexDirection:'row'
+       
     },
     SectionStyle: {
         flexDirection: 'row',
@@ -80,24 +158,25 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     listelem: {
-        backgroundColor: 'white',
-        width: '95%',
-        height: 300,
-        borderRadius: 8,
-        borderBottomColor: '#D3D3D3',
-        borderBottomWidth: 1,
-        padding: 10,
-        elevation: 10
+        backgroundColor: '#D3D3D3',
+        width: '100%',
+        height: "90%",
+       
+        
+        padding: 5,
+        elevation: 5,
+      
+      
     },
     img: {
-        height: 130,
-        width: 150,
-        marginLeft: '25%',
+        height: 160,
+        width: "100%",
+       
         resizeMode: 'stretch',
         alignItems: 'center',
     },
     imgx: {
-        height: 50,
+        height: "80%",
         width: 70,
         marginLeft: '2%',
         resizeMode: 'stretch',
@@ -112,10 +191,20 @@ const styles = StyleSheet.create({
         width: 50,
         marginLeft: '5%',
     },
-    listtxt: {
+    headingtxt: {
         fontSize: 18,
-        margin: '5%',
-        color: 'black'
+       margin:"1%",
+        color: 'black',
+        fontWeight:'800'
+    },
+    destxt: {
+        fontSize: 17,
+       marginLeft:"1%",
+        color: 'black',
+        width:"100%",
+        marginVertical:20,
+        
+       
     },
     headview: {
         backgroundColor: '#0000a5',
@@ -171,7 +260,13 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         borderWidth: 1,
         marginTop: '13%'
-    }
+    },
+    Profileimg: {
+        height: '170%',
+        width: '30%',
+       marginEnd:100,
+        
+        borderRadius: 90}
 
 
 });

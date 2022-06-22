@@ -1,13 +1,21 @@
-import * as React from 'react';
+import React, { useContext,useState } from 'react'
 import { View, Text, StyleSheet, ScrollView, TextInput, Image, Touchable, TouchableOpacity } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import Entypo from 'react-native-vector-icons/Entypo'
 import ImagePicker from 'react-native-image-crop-picker';
+import Modal from "react-native-modal";
+import PopUpModal from './PopUpModel';
+
 
 
 
 export default function Profile({ navigation }) {
+
+    const [modalVisible, setModalVisible] = useState(false);
+    const changeModelVisibility= (bool) =>{
+        setModalVisible(bool)
+    }
 
     const [profileimage, setprofileimage] = React.useState('https://icon-library.com/images/user-image-icon/user-image-icon-18.jpg');
     const selectProfileImage = () => {
@@ -42,8 +50,11 @@ export default function Profile({ navigation }) {
                 <View style={styles.subview}>
                     <Text style={styles.subheading}>
                         <Entypo name='colours' size={20} color={'blue'} style={styles.topicon} solid />  General</Text>
-                    <Text style={styles.txt}>Language</Text>
-                    <Text style={styles.txt}>Theme Colors</Text>
+
+                        {/* <TouchableOpacity   onPress={() => { setModalVisible(true) }}>
+                   <Text style={styles.txt} >Theme Colors </Text>
+                    </TouchableOpacity>  */}
+                  
                     <Text style={styles.txt}>Notifications</Text>
                 </View>
                 <View style={styles.subview}>
@@ -54,6 +65,19 @@ export default function Profile({ navigation }) {
                     <Text style={styles.txt} onPress={()=> navigation.navigate('PrivacyPolicy')}>Privacy Policy</Text>
                     <Text style={styles.txt}>Version 1.0.0</Text>
                 </View>
+
+                <Modal
+                    transparent={true}
+                    animationType={'fade'}
+                    isVisible={modalVisible}
+                    nRequestClose={() => changeModelVisibility(false)}
+                    >
+                        <PopUpModal
+                        changeModelVisibility={changeModelVisibility}/>
+                       
+
+                    </Modal>
+
             </ScrollView>
         </View>
     );

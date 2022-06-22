@@ -19,6 +19,8 @@ import MyAds from '../Screens/AdsPost/Post-Add/MyAds';
 import Alert from '../Screens/AdsPost/Post-Add/Alert';
 import AccountBalance from '../Screens/Account Balance/AccountBalance';
 import DetailsScreen from '../Screens/Sub Screens/DetailsScreen';
+import AllAdsScreen from '../Screens/Sub Screens/AllAdsScreen';
+import ShowingInages from '../Screens/Sub Screens/ShowingInages';
 
 
 const Stack = createNativeStackNavigator();
@@ -37,6 +39,9 @@ export default function Navigation() {
         <Stack.Screen name="Miscellaneous" component={Miscellaneous} />
         <Stack.Screen name="AccountBalance" component={AccountBalance} />
         <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
+        <Stack.Screen name="AllAdsScreen" component={AllAdsScreen} />
+        <Stack.Screen name="ShowingInages" component={ShowingInages} />
+
 
 
         <Stack.Screen name="Profile" component={Profile} />

@@ -9,26 +9,28 @@ import auth from '@react-native-firebase/auth';
 export default function Signup({ navigation }) {
     const [email, setemail] = React.useState()
     const [password, setpassword] = React.useState()
+    const [phoneno, setphoneno] = React.useState()
+    const [fullname, setfullname] = React.useState()
 
-    function createAccount(email,Password){
-        auth().createUserWithEmailAndPassword(email, Password)
-  .then(() => {
+//     function createAccount(email,Password){
+//         auth().createUserWithEmailAndPassword(email, Password)
+//   .then(() => {
       
      
-    navigation.navigate('PostAd')
-  })
-  .catch(error => {
-    if (error.code === 'auth/email-already-in-use') {
-      console.log('That email address is already in use!');
-    }
+//     navigation.navigate('PostAd')
+//   })
+//   .catch(error => {
+//     if (error.code === 'auth/email-already-in-use') {
+//       console.log('That email address is already in use!');
+//     }
 
-    if (error.code === 'auth/invalid-email') {
-      console.log('That email address is invalid!');
-    }
+//     if (error.code === 'auth/invalid-email') {
+//       console.log('That email address is invalid!');
+//     }
 
-    console.error(error);
-  });
-}
+//     console.error(error);
+//   });
+// }
         
     return (
         <View style={styles.container}>
@@ -36,6 +38,20 @@ export default function Signup({ navigation }) {
                 <Text style={styles.heading}><FontAwesome5 onPress={() => navigation.goBack()} name='arrow-left' size={18} color={'white'} style={styles.topicon} solid />  Sign Up</Text>
             </View>
             <View style={styles.View1}>
+            <TextInput
+                    style={styles.input}
+                    onChangeText={setfullname}
+                    value={fullname}
+                   
+                    placeholder="ENTER YOUR FULL NAME."
+                />
+            <TextInput
+                    style={styles.input}
+                    onChangeText={setphoneno}
+                    value={phoneno}
+                    keyboardType='numeric'
+                    placeholder="ENTER YOUR PHONE NUMBER."
+                />
                 <TextInput
                     style={styles.input}
                     onChangeText={setemail}
@@ -49,7 +65,7 @@ export default function Signup({ navigation }) {
                     placeholder="ENTER PASSWORD"
                 />
                 <TouchableOpacity style={styles.login}
-                 onPress={()=>createAccount(email,password)}>
+                 onPress={() =>  navigation.navigate('Signin')}>
                     <Text style={styles.logintxt}>Sign Up</Text>
                 </TouchableOpacity>
             </View>

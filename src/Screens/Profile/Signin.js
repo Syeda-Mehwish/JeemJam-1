@@ -7,25 +7,25 @@ import auth from '@react-native-firebase/auth';
 
 
 export default function Signin({ navigation }) {
-    const [email, setemail] = React.useState()
+    const [phoneno, setphoneno] = React.useState()
     const [password, setpassword] = React.useState()
-    function Signin(email,password){
+    // function Signin(email,password){
        
-             auth().signInWithEmailAndPassword(email, password) .then(() => {
+    //          auth().signInWithEmailAndPassword(email, password) .then(() => {
       
      
-                navigation.navigate('PostAd')
-              }) 
-              .catch(error => {
-                if (error.code === 'auth/invalid-email') {
-                console.log('That email address is invalid!');
-              }
+    //             navigation.navigate('PostAd')
+    //           }) 
+    //           .catch(error => {
+    //             if (error.code === 'auth/invalid-email') {
+    //             console.log('That email address is invalid!');
+    //           }
           
-              console.error(error);
-            });
+    //           console.error(error);
+    //         });
           
           
-        }
+    //     }
 
     
 
@@ -44,9 +44,10 @@ export default function Signin({ navigation }) {
             <View style={styles.View1}>
                 <TextInput
                     style={styles.input}
-                    onChangeText={setemail}
-                    value={email}
-                    placeholder="ENTER YOUR EMAIL."
+                    onChangeText={setphoneno}
+                    value={phoneno}
+                     keyboardType='numeric'
+                    placeholder="ENTER YOUR PHONE NUMBER."
                 />
                 <TextInput
                     style={styles.input}
@@ -54,7 +55,7 @@ export default function Signin({ navigation }) {
                     value={password}
                     placeholder="ENTER PASSWORD"
                 />
-                <TouchableOpacity style={styles.login} onPress={() =>  Signin(email,password)}>
+                <TouchableOpacity style={styles.login} onPress={() =>  navigation.navigate('Ad')}>
                     <Text style={styles.logintxt}>Login</Text>
                 </TouchableOpacity>
             </View>

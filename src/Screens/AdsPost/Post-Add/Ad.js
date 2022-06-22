@@ -181,46 +181,46 @@ export default function Ad({ navigation }) {
                         }>
                            
                             <Picker.Item label="Choose A Sub Category" value=" " style={styles.dropdowntxt} />
-                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Nokia"} value={"Nokia"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Huawei"} value={"Huawei"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"iPhone"} value={"iPhone"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Samsung"} value={"Samsung"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"Oppo"} value={"Oppo"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"BMW"} value={"BMW"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Kia"} value={"Kia"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Infiniti"} value={"Infiniti"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"JAC"} value={"JAC"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Jeep"} value={"Jeep"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Land Rover"} value={"Land Rover"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Lincoln"} value={"Lincoln"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Maserati"} value={"Maserati"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Mazda"} value={"Mazda"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Mercury"} value={"Mercury"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"MG"} value={"MG"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Mini Cooper"} value={"Mini Cooper"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Opel"} value={"Opel"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Peugeot"} value={"Peugeot"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Porsche"} value={"Porsche"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Renault"} value={"Renault"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Rover"} value={"Rover"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"SsangYong"} value={"SsangYong"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Suzuki"} value={"Suzuki"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Tata"} value={"Tata"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Volkswagen"} value={"Volkswagen"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Volvo"} value={"Volvo"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Misc. cars"} value={"Misc. cars"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Hyunday"} value={"Hyunday"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Lexus"} value={"Lexus"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Mercedes"} value={"Mercedes"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Mitsubishi"} value={"Mitsubishi"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Chevrolet"} value={"Chevrolet"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Ford"} value={"Ford"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Audi"} value={"Audi"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Cadillac"} value={"Cadillac"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Chery"} value={"Chery"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Chrysler"} value={"Chrysler"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Daewoo"} value={"Daewoo"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Dodge"} value={"Dodge"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Ferrari"} value={"Ferrari"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Fiat"} value={"Fiat"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"GMC"} value={"GMC"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Honda"} value={"Honda"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Import cars"} value={"Import cars"} style={styles.dropdowntxt} />
                         
                         
                     </Picker>:
@@ -235,10 +235,52 @@ export default function Ad({ navigation }) {
                             setMiscellaneousubcategory(itemValue)
                         }>
                          
-                        <Picker.Item label={"abc"} value={"abc"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"abcv"} value={"abcv"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"abcd"} value={"abcd"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"abcz"} value={"abcz"} style={styles.dropdowntxt} />
+                         <Picker.Item label="Choose A Sub Category" value=" " style={styles.dropdowntxt} />
+                        <Picker.Item label={"NoWholesale Dealskia"} value={"Wholesale Deals"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Furniture"} value={"Furniture"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Home Appliences"} value={"Home Appliences"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Clothes"} value={"Clothes"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Equipments"} value={"Equipments"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Accessories"} value={"Accessories"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Agriculture Equipment"} value={"Agriculture Equipment"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Animals and Pets"} value={"Animals and Pets"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Antiques and Collectibles"} value={"Antiques and Collectibles"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Billboards"} value={"Billboards"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Books and Magazines"} value={"Books and Magazines"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Building Materials"} value={"Building Materials"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Bus"} value={"Bus"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Cameras"} value={"Cameras"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Car Numbers"} value={"Car Numbers"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Computers"} value={"Computers"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Cosmetics"} value={"Cosmetics"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Electricity Generators"} value={"Electricity Generators"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Electronics"} value={"Electronics"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Equipments"} value={"Equipments"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Events"} value={"Events"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Fishing"} value={"Fishing"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Food and Nutrition"} value={"Food and Nutrition"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Games"} value={"Games"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Health care"} value={"Health care"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Heavy Duty Vehicle"} value={"Heavy Duty Vehicle"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Industrial Equipments"} value={"Industrial Equipments"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Items"} value={"Items"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Licenses"} value={"Licenses"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Medical Equipments"} value={"Medical Equipments"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Motorcyles"} value={"Motorcyles"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Motorhomes"} value={"Motorhomes"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Musical Instruments"} value={"Musical Instruments"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Nautical Equipment"} value={"Nautical Equipment"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Numbers"} value={"Numbers"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Perfumes and Fragrances"} value={"Perfumes and Fragrances"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Pick Ups"} value={"Pick Ups"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Security Systems"} value={"Security Systems"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Smart phones"} value={"Smart phones"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Software Solutions"} value={"Software Solutions"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Spare Parts"} value={"Spare Parts"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Sports Equipment"} value={"Sports Equipment"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Watches"} value={"Watches"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Unclassified"} value={"Unclassified"} style={styles.dropdowntxt} />
+                        
                         
                         
                     </Picker>:
@@ -256,10 +298,50 @@ export default function Ad({ navigation }) {
                          
                             
                         
-                        <Picker.Item label={"abc"} value={"abc"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"abcv"} value={"abcv"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"abcd"} value={"abcd"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"abcz"} value={"abcz"} style={styles.dropdowntxt} />
+                       <Picker.Item label="Choose A Sub Category" value=" " style={styles.dropdowntxt} />
+                        <Picker.Item label={"Tourist"} value={"Tourist"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Driver"} value={"Driver"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Engineer"} value={"Engineer"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Acountant"} value={"Acountant"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"labour"} value={"labour"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"AC Technicians"} value={"AC Technicians"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Administration"} value={"Administration"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Audio Visual"} value={"Audio Visual"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Beauty care"} value={"Beauty care"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Child Care"} value={"Child Care"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Cleaning Workers"} value={"Cleaning Workers"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Construction"} value={"Construction"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Craftsmen"} value={"Craftsmen"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Customer service"} value={"Customer service"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Data Entry"} value={"Data Entry"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Delivery"} value={"Delivery"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Designer"} value={"Designer"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Editors"} value={"Editors"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Education and Teaching"} value={"Education and Teaching"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Employees"} value={"Employees"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Fashion"} value={"Fashion"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Fine arts"} value={"Fine arts"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Fitness"} value={"Fitness"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Garden and Landscaping"} value={"Garden and Landscaping"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Guard & Security"} value={"Guard & Security"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Housemaids"} value={"Housemaids"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Human Resources"} value={"Human Resources"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Information Technology"} value={"Information Technology"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Law"} value={"Law"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Medicine and Nursing"} value={"Medicine and Nursing"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Partnership"} value={"Partnership"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Programming"} value={"Programming"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Public Relations"} value={"Public Relations"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Sales and Marketing"} value={"Sales and Marketing"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Secretarial"} value={"Secretarial"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Tailors"} value={"Tailors"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Technicians"} value={"Technicians"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Ticketing & Tourism"} value={"Ticketing & Tourism"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Translators"} value={"Translators"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Web Designers"} value={"Web Designers"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Misc. jobs"} value={"Misc. jobs"} style={styles.dropdowntxt} />
+                        
+                        
                         
                         
                     </Picker>:
@@ -279,10 +361,42 @@ export default function Ad({ navigation }) {
                          
                             
                         
-                        <Picker.Item label={"abc"} value={"abc"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"abcv"} value={"abcv"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"abcd"} value={"abcd"} style={styles.dropdowntxt} />
-                        <Picker.Item label={"abcz"} value={"abcz"} style={styles.dropdowntxt} />
+                            <Picker.Item label="Choose A Sub Category" value=" " style={styles.dropdowntxt} />
+                        <Picker.Item label={"Private Lessons"} value={"Private Lessons"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Taxi"} value={"Taxi"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Labor recruitment"} value={"Labor recruitment"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Contracting"} value={"Contracting"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Removal service"} value={"Removal service"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Building Home"} value={"Building Home"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Business"} value={"Business"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Formalities"} value={"Formalities"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Maintanence"} value={"Maintanence"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Cleaning"} value={"Cleaning"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Computers"} value={"Computers"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Entertainment"} value={"Entertainment"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Events Planning"} value={"Events Planning"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"General Services"} value={"General Services"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Guard & Security"} value={"Guard & Security"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Health & Beauty"} value={"Health & Beauty"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Homemade Cooking"} value={"Homemade Cooking"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Human Resources"} value={"Human Resources"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Internet"} value={"Internet"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Loan"} value={"Loan"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Lost and Found"} value={"Lost and Found"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Pest Control"} value={"Pest Control"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Professional Services"} value={"Professional Services"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Properties"} value={"Properties"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Real estate services"} value={"Real estate services"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Rent a Car"} value={"Rent a Car"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Shipping"} value={"Shipping"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Tax and Money"} value={"Tax and Money"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Telecoms"} value={"Telecoms"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Training & Tuition"} value={"Training & Tuition"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Translation"} value={"Translation"} style={styles.dropdowntxt} />
+                        <Picker.Item label={"Travel"} value={"Travel"} style={styles.dropdowntxt} />
+                        
+                        
+                        
                         
                         
                     </Picker>:
@@ -339,6 +453,8 @@ export default function Ad({ navigation }) {
                         style={styles.input}
                         onChangeText={setcontent}
                         value={content}
+                        multiline={true}
+                        underlineColorAndroid='transparent'
                         placeholder="ENTER CONTENT"
                     />
                     <TouchableOpacity style={styles.login} onPress={() => navigation.navigate('Alert')}>

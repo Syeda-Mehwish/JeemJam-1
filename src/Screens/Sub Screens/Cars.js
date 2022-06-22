@@ -15,7 +15,7 @@ export default function Cars({ navigation }) {
             <View style={styles.headview}>
                 <Text style={styles.heading}><FontAwesome5 onPress={() => navigation.goBack()} name='arrow-left' size={18} color={'white'} style={styles.topicon} solid />  Cars</Text>
                 <View style={styles.miniview}>
-                    <FontAwesome name='user-circle-o' size={25} color={'white'} style={styles.topicon} solid />
+                <FontAwesome name='user-circle-o' size={25} color={'white'} style={styles.topicon} solid onPress={() => navigation.navigate('Profile')} />
                 </View>
             </View>
             <ScrollView style={styles.list}>
@@ -38,7 +38,7 @@ export default function Cars({ navigation }) {
                 <View style={styles.subview}>
                     {CarData.map((item, index) => {
                         return (
-                            <TouchableOpacity key={index} onPress={()=> navigation.navigate('DetailsScreen')}>
+                            <TouchableOpacity key={index} onPress={()=> navigation.navigate('AllAdsScreen')}>
                                 <View style={styles.listelem}>
                                     <Image style={styles.img} source={item.img} />
                                     <Text style={styles.listtxt}>{item.name}</Text>
