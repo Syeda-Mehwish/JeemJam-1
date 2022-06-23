@@ -10,6 +10,37 @@ import { Mobiles } from '../Data/Mobile-Data';
 export default function Mobile({ navigation }) {
 
     const [text, onChangetext] = React.useState(null);
+    const [search, setSearch] =React.useState('');
+    const [filteredDataSource, setFilteredDataSource] = React.useState([]);
+    const [masterDataSource, setMasterDataSource] = React.useState([]);
+    React.useEffect(() => {
+        setFilteredDataSource(Mobiles);
+        setMasterDataSource(Mobiles);
+    }, []);
+
+        const searchFilterFunction = (text) => {
+            // Check if searched text is not blank
+            if (text) {
+              // Inserted text is not blank
+              // Filter the masterDataSource
+              // Update FilteredDataSource
+              const newData = masterDataSource.filter(
+                function (item) {
+                  const itemData = item.name
+                    ? item.name.toUpperCase()
+                    : ''.toUpperCase();
+                  const textData = text.toUpperCase();
+                  return itemData.indexOf(textData) > -1;
+              });
+              setFilteredDataSource(newData);
+              setSearch(text);
+            } else {
+              // Inserted text is blank
+              // Update FilteredDataSource with masterDataSource
+              setFilteredDataSource(masterDataSource);
+              setSearch(text);
+            }
+          };
     return (
         <View style={styles.container}>
             <View style={styles.headview}>
@@ -27,15 +58,15 @@ export default function Mobile({ navigation }) {
                     />
                     <TextInput
                         style={{ flex: 1, fontSize: 18 }}
+                        onChangeText={(text) => searchFilterFunction(text)}
+                        value={search}
                         placeholder="Search"
-                        onChangeText={onChangetext}
-                        value={text}
                         underlineColorAndroid="transparent"
                     />
                 </View>
 
                 <View style={styles.subview}>
-                    {Mobiles.map((item, index) => {
+                    {filteredDataSource.map((item, index) => {
                         return (
                             <TouchableOpacity key={index} onPress={()=> navigation.navigate('AllAdsScreen')}>
                                 <View style={styles.listelem}>

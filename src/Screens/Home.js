@@ -9,18 +9,52 @@ import { firebase } from '@react-native-firebase/auth';
 
 
 export default function Home({ navigation,route }) {
-     const [SelectedCountry , setSelectedCountry] =React.useState(null)
+     const [SelectedCountry , setSelectedCountry] =React.useState(null);
+     const [search, setSearch] =React.useState('');
+  const [filteredDataSource, setFilteredDataSource] = React.useState([]);
+  const [masterDataSource, setMasterDataSource] = React.useState([]);
+ 
     React.useEffect(()=>{
         let {SelectedCountry} = route.params 
         setSelectedCountry(SelectedCountry)
     },[])
+    React.useEffect(() => {
+            setFilteredDataSource(options);
+            setMasterDataSource(options);
+        
+      }, []);
+      const searchFilterFunction = (text) => {
+        // Check if searched text is not blank
+        if (text) {
+          // Inserted text is not blank
+          // Filter the masterDataSource
+          // Update FilteredDataSource
+          const newData = masterDataSource.filter(
+            function (item) {
+              const itemData = item.name
+                ? item.name.toUpperCase()
+                : ''.toUpperCase();
+              const textData = text.toUpperCase();
+              return itemData.indexOf(textData) > -1;
+          });
+          setFilteredDataSource(newData);
+          setSearch(text);
+        } else {
+          // Inserted text is blank
+          // Update FilteredDataSource with masterDataSource
+          setFilteredDataSource(masterDataSource);
+          setSearch(text);
+        }
+      };
+      
+    
 
     const [text, onChangetext] = React.useState(null);
     const CountryImg=SelectedCountry;
 
     const options = [
-        { id: 1, name: 'Mobiles', img: require('../../assets/Images/mob.jpg',), nextlocation: 'Mobile' },
-        { id: 2, name: 'Cars', img: require('../../assets/Images/tyty.jpg'), nextlocation: 'Cars' },
+        { id: 1, name: 'Mobiles', img: require('../../assets/Images/mob.png',), nextlocation: 'Mobile' },
+        { id: 2, name: 'Cars', img: require('../../assets/Images/tyty.png'), nextlocation: 'Cars' },
         { id: 3, name: 'Jobs', img: require('../../assets/Images/job.png'), nextlocation: 'Jobs' },
         { id: 4, name: 'Services', img: require('../../assets/Images/service.png'), nextlocation: 'Services' },
         { id: 5, name: 'Miscellaneous', img: require('../../assets/Images/notebook.jpg'), nextlocation: 'Miscellaneous' },]
@@ -47,9 +81,15 @@ export default function Home({ navigation,route }) {
                     />
                     <TextInput
                         style={{ flex: 1, fontSize: 18 }}
+                        onChangeText={(text) => searchFilterFunction(text)}
+                        value={search}
+                        
+                    
+              
+
+
                         placeholder="Search"
-                        onChangeText={onChangetext}
-                        value={text}
+                        
                         underlineColorAndroid="transparent"
                     />
                 </View>
@@ -58,15 +98,9 @@ export default function Home({ navigation,route }) {
                         <TouchableOpacity 
                         onPress={() =>  
                            { 
-                            firebase.auth().onAuthStateChanged(function(user) {
-                                if (user) {
+                            
                                     navigation.navigate('Ad')
-                                  // User is signed in.
-                                } else {
-                                    navigation.navigate('Ad')
-                                  // No user is signed in.
-                                }
-                              });}
+                             }
                         }>
                             <Image source={require('../../assets/Images/ad.png')} style={styles.img} />
                         </TouchableOpacity>
@@ -83,7 +117,7 @@ export default function Home({ navigation,route }) {
                 </View>
 
                 <View style={styles.subview}>
-                    {options.map((item, index) => {
+                    {filteredDataSource.map((item, index) => {
                         return (
                             <TouchableOpacity key={index} onPress={() => navigation.navigate(item.nextlocation)}>
                                 <View style={styles.listelem}>

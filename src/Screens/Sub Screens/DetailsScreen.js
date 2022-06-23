@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, TextInput, Image, Touchable, Toucha
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-import { options } from '../Sub Screens/allAdsScreen';
+import { options } from './AllAdsScreen';
 
 
 
@@ -18,6 +18,8 @@ export default function DetailsScreen({ navigation, route }) {
         let {selectedItem} = route.params
         setSelectedItem(selectedItem)
     },[])
+
+    
 
     return (
         <View style={styles.container}>
